@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE GreenCampus SYSTEM "greencampus.dtd">
+
+<GreenCampus
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="greencampus.xsd">
+
+    <Resources>
+        <Resource id="R1">
+            <Name>Solar Panels</Name>
+            <Type>Energy</Type>
+            <Quantity>50</Quantity>
+        </Resource>
+        <Resource id="R2">
+            <Name>Water Tanks</Name>
+            <Type>Water</Type>
+            <Quantity>10</Quantity>
+        </Resource>
+    </Resources>
+
+    <ConsumptionRecords>
+        <Record id="C1">
+            <ResourceName>Electricity</ResourceName>
+            <Consumption>1250.5</Consumption>
+            <RecordDate>2026-10-26</RecordDate>
+        </Record>
+    </ConsumptionRecords>
+
+    <SustainabilityMetrics>
+        <Metric id="M1">
+            <Name>Recycling Rate</Name>
+            <Value>74</Value>
+            <Unit>Percent</Unit>
+        </Metric>
+    </SustainabilityMetrics>
+
+</GreenCampus>

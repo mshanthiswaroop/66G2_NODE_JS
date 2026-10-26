@@ -1,0 +1,74 @@
+body {
+    background-color: #f3f8f4;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        #e8f5e9,
+        #c8e6c9
+    );
+    min-height: 500px;
+}
+
+/* Animated Earth */
+.earth-icon {
+    font-size: 9rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* Feature Cards */
+.feature-card {
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px
+                rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* Metric Cards */
+.metric-card {
+    transition: 0.3s;
+}
+
+.metric-card:hover {
+    transform: translateY(-8px);
+}
+
+.metric-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+
+    .earth-icon {
+        font-size: 6rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+}

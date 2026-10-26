@@ -1,0 +1,29 @@
+<!ELEMENT GreenCampus
+    (Resources, ConsumptionRecords, SustainabilityMetrics)>
+
+<!ATTLIST GreenCampus
+    xmlns:xsi CDATA #IMPLIED
+    xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+
+<!ELEMENT Resources (Resource+)>
+<!ELEMENT Resource (Name, Type, Quantity)>
+<!ATTLIST Resource id ID #REQUIRED>
+
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>
+
+<!ELEMENT ConsumptionRecords (Record+)>
+<!ELEMENT Record (ResourceName, Consumption, RecordDate)>
+<!ATTLIST Record id ID #REQUIRED>
+
+<!ELEMENT ResourceName (#PCDATA)>
+<!ELEMENT Consumption (#PCDATA)>
+<!ELEMENT RecordDate (#PCDATA)>
+
+<!ELEMENT SustainabilityMetrics (Metric+)>
+<!ELEMENT Metric (Name, Value, Unit)>
+<!ATTLIST Metric id ID #REQUIRED>
+
+<!ELEMENT Value (#PCDATA)>
+<!ELEMENT Unit (#PCDATA)>

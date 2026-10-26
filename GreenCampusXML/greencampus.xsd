@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="GreenCampus">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="Resources">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Resource"
+                                        maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Name"
+                                                    type="xs:string"/>
+                                        <xs:element name="Type"
+                                                    type="xs:string"/>
+                                        <xs:element name="Quantity"
+                                                    type="xs:decimal"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id"
+                                                  type="xs:ID"
+                                                  use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="ConsumptionRecords">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Record"
+                                        maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ResourceName"
+                                                    type="xs:string"/>
+                                        <xs:element name="Consumption"
+                                                    type="xs:decimal"/>
+                                        <xs:element name="RecordDate"
+                                                    type="xs:date"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id"
+                                                  type="xs:ID"
+                                                  use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="SustainabilityMetrics">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Metric"
+                                        maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Name"
+                                                    type="xs:string"/>
+                                        <xs:element name="Value"
+                                                    type="xs:decimal"/>
+                                        <xs:element name="Unit"
+                                                    type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id"
+                                                  type="xs:ID"
+                                                  use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
